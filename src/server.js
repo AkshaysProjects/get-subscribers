@@ -4,7 +4,12 @@ const subscribersRoute = require("./routes/subscribersRoute");
 // Initialize express application
 const app = express();
 
-// Route configuration
+// Hello World
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+// Use the subscribers route
 app.use("/subscribers", subscribersRoute);
 
 // Start the server
